@@ -1,0 +1,23 @@
+== == == == == == == main == == == == == == ==
+<meta property="og:type" content="website">
+<meta property="og:title" content="furstamp portfolio">
+<meta property="og:description" content="i'm known as furstamp, a website developer who makes projects usually with music.">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/973394231446102036/978067549990293534/unknown-7.png">
+<meta property="og:site_name" content="furstamp">
+<meta property="og:locale" content="pt-BR">
+
+== == == == == == == projs == == == == == == ==
+<meta property="og:type" content="website">
+<meta property="og:title" content="furstamp projects">
+<meta property="og:description" content="i'm known as furstamp, a website developer who makes projects usually with music.">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/973394231446102036/978067549990293534/unknown-7.png">
+<meta property="og:site_name" content="furstamp">
+<meta property="og:locale" content="pt-BR">
+
+== == == == == == == social == == == == == == ==
+<meta property="og:type" content="website">
+<meta property="og:title" content="furstamp social medias">
+<meta property="og:description" content="this part of the site is still under development. try again later.">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/973394231446102036/978067549990293534/unknown-7.png">
+<meta property="og:site_name" content="furstamp">
+<meta property="og:locale" content="pt-BR">
