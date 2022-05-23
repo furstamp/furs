@@ -1,0 +1,6 @@
+Google Fonts --- https://fonts.google.com/
+jQuery --------- https://jquery.com/
+Font Awesome --- https://fontawesome.com/
+W3 XHTML ------- https://www.w3.org/1999/xhtml/
+Live Server ---- https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+Editor Config -- https://editorconfig.org/

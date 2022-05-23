@@ -1,0 +1,9 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# arquivo com estrutura padrão do site oficial
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file?
+end_of_line = lf
+insert_final_newline = false
