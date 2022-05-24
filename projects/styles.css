@@ -53,14 +53,14 @@ table {
 
 @font-face {
     font-family: Circular Pro Book;
-    src: url(/assets/fonts/CircularPro-Book.fcea822f.woff2) format("woff2"), url(/assets/fonts/CircularPro-Book.588eb6b1.woff) format("woff");
+    src: url(https://furstamp.github.io/furs/assets/fonts/CircularPro-Book.fcea822f.woff2) format("woff2"), url(https://furstamp.github.io/furs/assets/fonts/CircularPro-Book.588eb6b1.woff) format("woff");
     font-weight: 450;
     font-style: normal;
 }
 
 @font-face {
     font-family: Circular Pro Medium;
-    src: url(/assets/fonts/CircularPro-Medium.6d9ac4df.woff2) format("woff2"), url(/assets/fonts/CircularPro-Medium.03178f59.woff) format("woff");
+    src: url(https://furstamp.github.io/furs/assets/fonts/CircularPro-Medium.6d9ac4df.woff2) format("woff2"), url(https://furstamp.github.io/furs/assets/fonts/CircularPro-Medium.03178f59.woff) format("woff");
     font-weight: 500;
     font-style: normal;
 }
