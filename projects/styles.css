@@ -319,6 +319,12 @@ b, strong {
     opacity:0;
 }
 
+#login {
+    background-color: #151515;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 .header .button{
     z-index:2;
     display:-webkit-inline-box;
@@ -331,7 +337,8 @@ b, strong {
     -ms-flex-pack:center;
     justify-content:center;
     white-space:nowrap;
-    background:#2c71f6;
+    border: 1px solid #fff;
+    background-color:#151515;
     color:#fff;
     border-radius: 3em;
     padding:0 .85em;
