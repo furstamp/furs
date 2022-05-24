@@ -422,9 +422,9 @@
         // desativando o clique direito
         document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // function ctrlShiftKey(e, keyCode) {
-        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
-        // }
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
+        }
 
         document.onkeydown = (e) => {
             // desativando o F12, ctrl+shift+i, ctrl+shift+j e o ctrl+u
