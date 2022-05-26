@@ -427,13 +427,13 @@
         }
 
         document.onkeydown = (e) => {
-            // desativando o F12, ctrl+shift+i, ctrl+shift+j e o ctrl+u
+            // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
             // inspecionar elementos, source code e console
 
             if (
                 event.keyCode === 123 ||
                 ctrlShiftKey(e, 'I') || // ctrl + shift + i
-                ctrlShiftKey(e, 'J') || // ctrl + shift + i
+                ctrlShiftKey(e, 'J') || // ctrl + shift + j
                 ctrlShiftKey(e, 'C') || // ctrl + shift + c
                 (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
             ) return false;
