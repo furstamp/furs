@@ -62,7 +62,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <!-- desativar ctrl + shift + i, ctrl + shift + j e o F12 -->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             window.oncontextmenu = function () {
                 return false;
             }
@@ -75,7 +75,7 @@
                     return false;
                 }
             });
-        </script>
+        </script> -->
 
     </head>
 
@@ -118,14 +118,32 @@
                             <div class="video-background prllx">
                                 <div class="home_intro_videos">
 
+                                    <script>
+                                        $(document).ready(function() {
+                                            var images = [
+                                                'https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/340/895/mp4/3d-rendering-loop-of-neon-sci-fi-corridor-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/465/296/mp4/time-lapse-driving-light-on-road-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/005/176/649/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
+                                            ];
+
+                                            var randomNumber = Math.floor(Math.random() * images.length);
+                                            var bgImg = 'url(' + images[randomNumber] + ')';
+
+                                            $('body').css({ 'background': bgImg, 'background-size': 'cover', });
+                                        });
+                                    </script>
+
                                     <video class="intro" muted playsinline>
-                                        <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/webm" />
-                                        <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/mp4" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4" />
                                     </video>
 
                                     <video class="intro-loop" muted playsinline loop>
-                                        <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/webm" />
-                                        <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/mp4" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4" />
                                     </video>
 
                                 </div>
@@ -285,8 +303,8 @@
                         <div class="video-background prllx force-end" data-prllx-d="200">
                             <div class="footer_video">
                                 <video class="" autoplay loop muted playsinline>
-                                    <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/webm">
-                                    <source src="https://cdn-cf-east.streamable.com/video/mp4/n5by7k.mp4?Expires=1653526380&Signature=mcvAKlfYExjhz~bWdjl-a7Xq9bTApOaj9n7tnWydr8FflH8nRVJwEs-~J5d~UrXC1-4a02ocPug6Apk5c9qZZeIlg~Ui7Vi-Jwmua5orwAsbmGhwlh6vSbHwWSWiQxyEkGNK91aQKJo7DLQzFNEcoyw7I4oPPaozDMyJTdziMOnr--DQwxdgy3TAlFIlnL0STj-ZOxho48U4eddUWI1sNg4wxD5AC9K4Mx7Xch2t-yiBGo-WpWqmNQyj7l9BETqPR7uVbIV93EoVf2PV2dx5OWD2qhsG5h8P4TQ~Bat7CrUh8jJT6rlg1TM-4pX-o~Ro0ezjl1vTATHRoAw6EnyBkQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/mp4">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -419,25 +437,25 @@
     </script>
 
     <script>
-        // desativando o clique direito
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        // // desativando o clique direito
+        // document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        function ctrlShiftKey(e, keyCode) {
-            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
-        }
+        // function ctrlShiftKey(e, keyCode) {
+        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
+        // }
 
-        document.onkeydown = (e) => {
-            // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
-            // inspecionar elementos, source code e console
+        // document.onkeydown = (e) => {
+        //     // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
+        //     // inspecionar elementos, source code e console
 
-            if (
-                event.keyCode === 123 ||
-                ctrlShiftKey(e, 'I') || // ctrl + shift + i
-                ctrlShiftKey(e, 'J') || // ctrl + shift + j
-                ctrlShiftKey(e, 'C') || // ctrl + shift + c
-                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
-            ) return false;
-        };
+        //     if (
+        //         event.keyCode === 123 ||
+        //         ctrlShiftKey(e, 'I') || // ctrl + shift + i
+        //         ctrlShiftKey(e, 'J') || // ctrl + shift + j
+        //         ctrlShiftKey(e, 'C') || // ctrl + shift + c
+        //         (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
+        //     ) return false;
+        // };
     </script>
 
     <script src="https://kit.fontawesome.com/358359fe14.js" crossorigin="anonymous"></script>
