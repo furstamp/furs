@@ -303,8 +303,8 @@
                         <div class="video-background prllx force-end" data-prllx-d="200">
                             <div class="footer_video">
                                 <video class="" autoplay loop muted playsinline>
-                                    <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm">
-                                    <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4" type="video/webm">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -438,24 +438,24 @@
 
     <script>
         // // desativando o clique direito
-        // document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // function ctrlShiftKey(e, keyCode) {
-        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
-        // }
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
+        }
 
-        // document.onkeydown = (e) => {
-        //     // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
-        //     // inspecionar elementos, source code e console
+        document.onkeydown = (e) => {
+            // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
+            // inspecionar elementos, source code e console
 
-        //     if (
-        //         event.keyCode === 123 ||
-        //         ctrlShiftKey(e, 'I') || // ctrl + shift + i
-        //         ctrlShiftKey(e, 'J') || // ctrl + shift + j
-        //         ctrlShiftKey(e, 'C') || // ctrl + shift + c
-        //         (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
-        //     ) return false;
-        // };
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') || // ctrl + shift + i
+                ctrlShiftKey(e, 'J') || // ctrl + shift + j
+                ctrlShiftKey(e, 'C') || // ctrl + shift + c
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
+            ) return false;
+        };
     </script>
 
     <script src="https://kit.fontawesome.com/358359fe14.js" crossorigin="anonymous"></script>
