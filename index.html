@@ -120,7 +120,7 @@
 
                                     <script>
                                         $(document).ready(function() {
-                                            var images = [
+                                            var classCycle = [
                                                 'https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
                                                 'https://static.vecteezy.com/system/resources/previews/003/340/895/mp4/3d-rendering-loop-of-neon-sci-fi-corridor-free-video.mp4',
                                                 'https://static.vecteezy.com/system/resources/previews/003/465/296/mp4/time-lapse-driving-light-on-road-free-video.mp4',
@@ -129,10 +129,10 @@
                                                 'https://static.vecteezy.com/system/resources/previews/005/176/649/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
                                             ];
 
-                                            var randomNumber = Math.floor(Math.random() * images.length);
-                                            var bgImg = 'url(' + images[randomNumber] + ')';
+                                            var randomNumber = Math.floor(Math.random() * classCycle.length);
+                                            var classToAdd = classCycle[randomNumber];
 
-                                            $('body').css({ 'background': bgImg, 'background-size': 'cover', });
+                                            $('body').addClass(classToAdd);
                                         });
                                     </script>
 
