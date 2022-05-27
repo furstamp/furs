@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="https://www.w3.org/1999/xhtml" lang="pt-BR">
 
     <head>
 
         <!-- título e descrição -->
-        <title>some projects</title>
+        <title>furstamp</title>
         <meta name="description" content="i'm known as furstamp, a website developer who makes projects usually with music.">
 
         <!-- necessários -->
@@ -22,11 +22,11 @@
         <link rel="apple-touch-icon" href="https://furstamp.github.io/furs/icons/f128x128.png" sizes="128x128">
         <link rel="shortcut icon" href="https://furstamp.github.io/furs/icons/favicon.ico" type="image/x-icon" sizes="32x32">
 
-        <!-- propriedades og: (link, tipo, título, descrição, imagem, sitename e língua) -->
-        <meta property="og:url" content="https://furstamp.github.io/furs/projs.html">
+        <!-- propriedades og: (link, tipo, título, descrição, imagem, sitename, logo e língua) -->
+        <meta property="og:url" content="https://furstamp.github.io/furs/">
         <meta property="og:logo" content="https://furstamp.github.io/furs/icons/android-chrome-512x512.png" size="512x512">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="furstamp projects">
+        <meta property="og:title" content="furstamp portfolio">
         <meta property="og:description" content="i'm known as furstamp, a young brazilian programming student that code websites projects usually with music. interested in typescript, go and python.">
         <meta property="og:image" content="https://cdn.discordapp.com/attachments/973394231446102036/978067549990293534/unknown-7.png">
         <meta property="og:site_name" content="furstamp">
@@ -41,43 +41,71 @@
         <meta name="twitter:card" content="summary_large_image">
         <!-- <meta name="twitter:site" content="@MolliePayments"> -->
         <meta name="twitter:title" content="furstamp">
-        <meta name="twitter:description" content="i'm known as furstamp, a young brazilian programming student that code websites projects usually with music. interested in typescript, go and python.">
+        <meta name="twitter:description" content="i'm known as furstamp, a website developer who makes projects usually with music.">
         <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/973394231446102036/978067549990293534/unknown-7.png">
 
         <meta name="robots" content="index,follow">
 
         <!-- importando arquivos css -->
-        <link rel="stylesheet" id="stylesheet-css" href="https://furstamp.github.io/furs/projects/styles.css" type="text/css" media="all">
+        <link rel="stylesheet" href="index.css" type="text/css"> <!-- id="stylesheet-css" media="all" -->
+
+        <!-- urls 
+        <link rel="canonical" href="https://furstamp.github.io/furs/">
+        <link rel="shortlink" href="https://furstamp.github.io/furs/"> -->
 
         <!-- alterar línguas
         <link rel="alternate" href="https://useplink.com/nl/" hreflang="nl">
         <link rel="alternate" href="https://useplink.com/de/" hreflang="de">
         <link rel="alternate" href="https://useplink.com/fr/" hreflang="fr"> -->
 
+        <!-- jquery | versão 3.6.0 -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- desativar ctrl + shift + i, ctrl + shift + j e o F12 -->
+        <!-- <script type="text/javascript">
+            window.oncontextmenu = function () {
+                return false;
+            }
+
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                    return false;
+                }
+            });
+        </script> -->
+
     </head>
 
+    <body class="pt-BR" oncontextmenu="return false;"> <!-- oncontextmenu="return false;" -->
 
-    <body class="pt-BR">
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        
         <div class="loader">
             <span>loading the portfolio...</span>
         </div>
 
         <header class="header">
-            <a class="logo" name="furs" href="index.html">
+            <a class="logo" name="furs" target="_self" rel="nofollow" href="https://furstamp.github.io/src/pages/index/index.html">
                 <span>furs</span>
-                <img
-                    src="furs.png"
+                <img 
+                    src="../../../assets/furs.png"
                     alt="furs"
-                    width="57"
+                    width="58"
                     height="23"
                 />
             </a>
             <nav>
                 <div class="header_menu">
-                    <!-- <a name="Faq" href="/en/faq/">FAQ</a> -->  
-                    <!-- <a name="Content" href="mailto:plink@mollie.com" target="_self">Content</a> -->
+                    <a name="about" href="../about/about.html" target="_self" rel="nofollow">about me</a>
+                    <a name="projects" href="../projs/projs.html" target="_self" rel="nofollow">projects</a>
+                    <a name="social" href="../social/social.html" target="_self" rel="nofollow">social medias</a>
+                    <a name="source" href="https://github.com/furstamp/furs/" target="_self" rel="nofollow">site source</a>
                 </div>
-                <a id="login" name="back home" class="button" href="https://furstamp.github.io/furs/index.html" target="_self" rel="nofollow">back home</a>
+                <a id="login" name="github" class="button" href="https://github.com/furstamp/" target="_blank" rel="nofollow">github.com/furstamp</a>
             </nav>
 
         </header>
@@ -86,31 +114,54 @@
             <div id="home" class="home hidden">
                 <div class="scrollable">
                     <div class="page-wrapper">
-
                         <section class="home_intro">
+
                             <div class="video-background prllx">
                                 <div class="home_intro_videos">
+
+                                    <script>
+                                        $(document).ready(function() {
+                                            var classCycle = [
+                                                'https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/340/895/mp4/3d-rendering-loop-of-neon-sci-fi-corridor-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/465/296/mp4/time-lapse-driving-light-on-road-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4',
+                                                'https://static.vecteezy.com/system/resources/previews/005/176/649/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4',
+                                            ];
+
+                                            var randomNumber = Math.floor(Math.random() * classCycle.length);
+                                            var classToAdd = classCycle[randomNumber];
+
+                                            $('home-intro').addClass(classToAdd);
+                                        });
+                                    </script>
+
                                     <video class="intro" muted playsinline>
-                                        <source src="https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4" type="video/webm" />
-                                        <source src="https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4" type="video/mp4" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4" />
                                     </video>
+
                                     <video class="intro-loop" muted playsinline loop>
-                                        <source src="https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4" type="video/webm" />
-                                        <source src="https://static.vecteezy.com/system/resources/previews/002/163/052/mp4/traffic-bokeh-at-night-in-the-street-free-video.mp4" type="video/mp4" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/webm" />
+                                        <source src="https://static.vecteezy.com/system/resources/previews/005/176/183/mp4/traffic-and-pedestrians-on-london-bridge-in-london-time-lapse-free-video.mp4" type="video/mp4" />
                                     </video>
+
                                 </div>
                             </div>
+
                             <div class="arrow-bottom">
                                 <svg viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.1875 14.4375L8.5 19.6875M8.5 19.6875L13.8125 14.4375M8.5 19.6875V1.3125" stroke="white" stroke-width="2" stroke-linecap="square"/>
                                 </svg>
                             </div>
+
                             <div class="home_titles">
-                                <h1 class="title">
-                                    <span>hello again...<br>my projects<br></span>
-                                    <span>are just below</span>
+                                <h1 class="title" id="noselect">
+                                    <span>hey<br>i'm furstamp...<br></span>
+                                    <span>a code and music lover</span>
                                 </h1>
-                                <h2 class="baseline">it's nothing too complex, but it's worth a look.</h2>
+                                <h2 class="baseline" id="noselect">and i'm probably doing something related to music</h2>
                             </div>
                         </section>
 
@@ -142,105 +193,37 @@
                                 </div>
                             </div> -->
                             <div class="home_titles block-anim no-slide just-below">
-                                <h1 class="title">below,<br>some of my<br>projects</h1>
-                                <!-- <h2 class="baseline"><p>are one of the few things that i like</p>
-                                </h2> -->
+                                <h1 class="title" id="noselect">games,<br>programming<br>and music</h1>
+                                <h2 class="baseline"><p id="noselect">are one of the few things that i like...</p>
+                                </h2>
                             </div>
-
-                            <ul class="home_create_facts">
+                            <ul class="home_create_facts" id="noselect">
                                 <li>
                                     <h3 class="title">
-                                        <i class="fa-brands fa-js"></i>
-                                        <a href="https://github.com/kraskov/img2txt" target="_blank" id="js">img2txt</a>
+                                        <i class="fas fa-code"></i> source-code
                                     </h3>
-                                    <h4 class="text">image to text converter using tesseract.js</h4>
+                                    <h4 class="text">most of my projects are themselves source-code</h4>
                                 </li>
                                 <li>
                                     <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/DigitalClock" target="_blank" id="python">digitalclock</a>
+                                        <i class="fa-solid fa-file-code"></i> responsive
                                     </h3>
-                                    <h4 class="text">a live synced virtual clock with graphical interface</h4>
+                                    <h4 class="text">websites with responsive layouts and structures</h4>
                                 </li>
                                 <li>
                                     <h3 class="title">
-                                        <i class="fa-brands fa-html5"></i>
-                                        <a href="https://github.com/kraskov/READMETemplates" target="_blank" id="html">vyonis</a>
+                                        <i class="fa-solid fa-circle-info"></i> informativeness
                                     </h3>
-                                    <h4 class="text">complete website that helps you and suggests icons</h4>
+                                    <h4 class="text">all projects have beautiful and informative READMEs</h4>
                                 </li>
                                 <li>
                                     <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/AudioExtractor" target="_blank" id="python">audioextractor</a>
+                                        <i class="fa-solid fa-calendar-check"></i> constancy
                                     </h3>
-                                    <h4 class="text">audio extractor from video files, mp4 to mp3</h4>
-                                </li>
-                            </ul>
-
-                            <ul class="home_create_facts">
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/CaptchaGenerator" target="_blank" id="python">captchagen</a>
-                                    </h3>
-                                    <h4 class="text">a simple captcha challenge generator</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fab fa-css3"></i>
-                                        <a href="https://github.com/kraskov/discordcardpreview" target="_blank" id="css">discardpreview</a>
-                                    </h3>
-                                    <h4 class="text">simulate your discord profile, styling it to your liking</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fab fa-markdown"></i>
-                                        <a href="https://github.com/kraskov/READMETemplates" target="_blank" id="markdown">readmetemplates</a>
-                                    </h3>
-                                    <h4 class="text">a set of readme ideas to be used in your projects</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/PythonCalculator" target="_blank" id="python">pycalculator</a>
-                                    </h3>
-                                    <h4 class="text">a simple calculator with graphical interface</h4>
-                                </li>
-                            </ul>
-
-                            <ul class="home_create_facts">
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fab fa-markdown"></i>
-                                        <a href="https://github.com/kraskov/CaptchaGenerator" target="_blank" id="markdown">distokentuto</a>
-                                    </h3>
-                                    <h4 class="text">complete step by step tutorial to pick up your bot token</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/disfetcher" target="_blank" id="python">disfetcher</a>
-                                    </h3>
-                                    <h4 class="text">capture the id of all members of a server</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fa-brands fa-js"></i>
-                                        <a href="https://github.com/kraskov/imgconverter" target="_blank" id="js">imgconverter</a>
-                                    </h3>
-                                    <h4 class="text">site to convert image formats, like jpeg, png, gif...</h4>
-                                </li>
-                                <li>
-                                    <h3 class="title">
-                                        <i class="fa-brands fa-python"></i>
-                                        <a href="https://github.com/kraskov/neopad" target="_blank" id="python">neopad</a>
-                                    </h3>
-                                    <h4 class="text">an complete text editor, with graphic interface</h4>
+                                    <h4 class="text">constant desire to develop useless things/projects</h4>
                                 </li>
                             </ul>
                         </section>
-
 
                         <!-- <section class="home_send">
                             <div class="home_send_video prllx" data-prllx-d="50">
@@ -250,8 +233,8 @@
                                 </video>
                             </div>
                             <div class="home_titles">
-                                <h1 class="title">Easily<br />send requests<br>via e-mail or SMS</h1>
-                                <h2 class="baseline">... or copy-paste the link</h2>
+                                <h1 class="title" id="noselect">ah,<br>i never check<br>my e-mail.</h1>
+                                <h2 class="baseline" id="noselect">don't waste your time contacting me there...</h2>
                             </div>
                         </section> -->
 
@@ -289,13 +272,15 @@
                                     </div>
                                 </div>
                             </div>
+
                         </section>
-                        <section class="home_payment nav-switch" data-switch-color="#000000">
+
+                        <!-- <section class="home_payment nav-switch" data-switch-color="#000000">
                             <div class="home_titles">
-                                <h1 class="title">and there's<br>still a lot to come...</h1>
-                                <h2 class="baseline">new projects are constantly being added to my github.</h2>
+                                <h1 class="title">All major <br>payment methods</h1>
+                                <h2 class="baseline">Plink works with Mollie. Your customer can complete the payment requests using all major payment methods, like creditcard or iDEAL.</h2>
                             </div>
-                            <!-- <div class="prllx" data-prllx-d="10" data-prllx-offset="2">
+                            <div class="prllx" data-prllx-d="10" data-prllx-offset="2">
                                 <div class="home_payment_logos scroll-loop prllx-elt">
                                     <div>
                                         <span>
@@ -310,57 +295,62 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div> -->
-                        </section>
+                            </div>
+                        </section> -->
+
                     </div>
+                    <footer class="footer nav-switch" data-switch-color="#FFFFFF">
 
-                    <footer>
-
-                        <!-- <div class="video-background prllx force-end" data-prllx-d="200">
+                        <div class="video-background prllx force-end" data-prllx-d="200">
                             <div class="footer_video">
                                 <video class="" autoplay loop muted playsinline>
-                                    <source src="https://useplink.com/assets/images/frontpage/loop.webm" type="video/webm">
-                                    <source src="https://useplink.com/assets/images/frontpage/loop.mp4" type="video/mp4">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4" type="video/webm">
+                                    <source src="https://static.vecteezy.com/system/resources/previews/003/465/293/mp4/time-lapse-driving-light-on-road-free-video.mp4" type="video/mp4">
                                 </video>
                             </div>
-                        </div> -->
+                        </div>
 
-                        <!-- <div class="home_titles">
-                            <h1 class="title">Start for<br>free today</h1>
-                            <a class="footer_cta button" rel="nofollow" name="Login with mollie" href="/projects/main.html" target="_blank" rel="noopener"><h2>see projects</h2></a>
-                        </div> -->
-                        
+                        <div class="home_titles">
+                            <h1 class="title" id="noselect">see some of my<br>small projects</h1>
+                            <a class="footer_cta button" name="projects" href="../projs/projs.html" target="_self" rel="nofollow"><h2>see some projects</h2></a>
+                        </div>
+
                         <div class="footer_bottom">
-                            <!-- <div class="powered-by">Plink is powered by <a href="https://www.mollie.com" target="_blank" rel="noopener">Mollie</a></div> -->
-                            <!-- <div class="copyright">Copyright © 2022 Mollie B.V. All rights reserved.</div> -->
+                            <div class="powered-by">the site is still under development, it is entirely possible for bugs to appear</div>
+                            <div class="copyright"> </div>
                             <nav>
                                 <div class="lang-select">
                                     <div class="lang-select-btn">
-                                        <span class="title">English</span>
-                                        <span class="icon">
+                                        <span class="title"> </span>
+                                        <!-- <span class="icon">
                                             <svg width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.707107 0.0859375L3.03422 2.41305L2.32711 3.12016L0 0.793044L0.707107 0.0859375Z" fill="white"/>
                                                 <path d="M4.0356 0L1.62002 2.41558L2.32713 3.12268L4.7427 0.707107L4.0356 0Z" fill="white"/>
                                             </svg>
-                                        </span>
+                                        </span> -->
                                     </div>
+
                                     <div class="lang-select-list">
                                         <ul>
+
                                             <li id="nl">
                                                 <a name="Nederlands" href="/nl/" target="_self">
                                                     Nederlands
                                                 </a>
                                             </li>
+
                                             <li id="de">
                                                 <a name="Nederlands" href="/de/" target="_self">
                                                     Deutsch
                                                 </a>
                                             </li>
+
                                             <li id="fr">
                                                 <a name="Nederlands" href="/fr/" target="_self">
                                                     Français
                                                 </a>
                                             </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -370,13 +360,85 @@
                 </div>
             </div>
         </div>
+
+    <!-- código injetado por live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+
+                    for (var i = 0; i < sheets.length; ++i) {
+
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+
+                        parent.appendChild(elem);
+
+                    }
+                }
+
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
     </body>
 
     <script nonce="uFzfTaii6uCBocstVfB8AA==" type="text/javascript" src="https://useplink.com/assets/js/vendor.js"></script>
     <script nonce="uFzfTaii6uCBocstVfB8AA==" type="text/javascript" src="https://useplink.com/assets/js/main.js"></script>
 
+    <!-- <script nonce="uFzfTaii6uCBocstVfB8AA==">
+        (function(i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-8558488-10', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+
+    <script> // desabilitando o ctrl + u da página [apenas]
+        // método 2 [sem necessidade de import por url]
+
+        // document.onkeydown = function(e) {
+        //     if (e.ctrlKey && 
+        //         (e.keyCode === 85 )) {
+        //         return false;
+        //     }
+        // };
+    </script>
+
+    <script> // desabilitando o clique direito [apenas]
+        // document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
     <script>
-        // desativando o clique direito
+        // // desativando o clique direito
         document.addEventListener('contextmenu', (e) => e.preventDefault());
 
         function ctrlShiftKey(e, keyCode) {
@@ -384,13 +446,13 @@
         }
 
         document.onkeydown = (e) => {
-            // desativando o F12, ctrl+shift+i, ctrl+shift+j e o ctrl+u
+            // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
             // inspecionar elementos, source code e console
 
             if (
                 event.keyCode === 123 ||
                 ctrlShiftKey(e, 'I') || // ctrl + shift + i
-                ctrlShiftKey(e, 'J') || // ctrl + shift + i
+                ctrlShiftKey(e, 'J') || // ctrl + shift + j
                 ctrlShiftKey(e, 'C') || // ctrl + shift + c
                 (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
             ) return false;
@@ -398,5 +460,5 @@
     </script>
 
     <script src="https://kit.fontawesome.com/358359fe14.js" crossorigin="anonymous"></script>
-    
+
 </html>
