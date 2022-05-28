@@ -296,25 +296,25 @@
     <script nonce="uFzfTaii6uCBocstVfB8AA==" type="text/javascript" src="https://useplink.com/assets/js/main.js"></script>
 
     <script>
-        // // // desativando o clique direito
-        // document.addEventListener('contextmenu', (e) => e.preventDefault());
+        // // desativando o clique direito
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // function ctrlShiftKey(e, keyCode) {
-        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
-        // }
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); 
+        }
 
-        // document.onkeydown = (e) => {
-        //     // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
-        //     // inspecionar elementos, source code e console
+        document.onkeydown = (e) => {
+            // desativando o F12, ctrl+shift+i, ctrl+shift+j, ctrl+shift+c e o ctrl+u
+            // inspecionar elementos, source code e console
 
-        //     if (
-        //         event.keyCode === 123 ||
-        //         ctrlShiftKey(e, 'I') || // ctrl + shift + i
-        //         ctrlShiftKey(e, 'J') || // ctrl + shift + j
-        //         ctrlShiftKey(e, 'C') || // ctrl + shift + c
-        //         (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
-        //     ) return false;
-        // };
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') || // ctrl + shift + i
+                ctrlShiftKey(e, 'J') || // ctrl + shift + j
+                ctrlShiftKey(e, 'C') || // ctrl + shift + c
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) // ctrl + u
+            ) return false;
+        };
     </script>
 
     <script src="https://kit.fontawesome.com/358359fe14.js" crossorigin="anonymous"></script>
