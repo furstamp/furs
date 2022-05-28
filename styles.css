@@ -667,6 +667,7 @@ b, strong {
     font-size: 1.38889vw;
     color: #fff;
     opacity: 1;
+    user-select: none;
 }
 
 .video-background {
